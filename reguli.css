@@ -1,0 +1,491 @@
+.meno {
+    display:none;
+}
+button {
+    display:none;
+}
+#frf{
+    z-index: 6;
+    position: absolute;
+    margin-top:-0.8%;
+    margin-left:-15%;
+    width: 120px;
+    height: 75px;
+}
+#dropdown-bg{
+    visibility: hidden;
+    position:absolute;
+    margin-top:2.8%;
+    margin-left:53%;
+    width:180px;
+    height:40px;
+    background-color: black;
+    opacity:0.6;
+    z-index:1;
+}
+#dropdown-about{
+    visibility: hidden;
+   
+    position:absolute;
+    margin-top:2.9%;
+    margin-left:-20%;
+    width:180px;
+    height:20px;
+    background-color: black;
+    opacity:0.6;
+    z-index:1;
+}
+#about:hover + #dropdown-about {
+    visibility: visible;
+}
+nav>ul #div:hover + #dropdown-bg{
+    visibility: visible;
+}
+header {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:10;
+    
+    
+}
+header #color {
+    background-color: black;
+    opacity: 1;
+    position:relative;
+    height:50px;
+    width:100%;
+    opacity: 0;
+   
+}
+nav{
+    
+    position:absolute;
+    top:30%;
+    left:10%;
+    z-index: 5;
+    width:80%;
+}
+nav ul {
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: left;
+    
+}
+nav ul li {
+    list-style-type:    none;
+    z-index:4;
+}
+nav ul li a {
+    text-decoration: none;
+    color:white;
+}
+nav ul li a:hover {
+    color:rgb(179, 255, 179);
+}
+
+h1 {
+    text-align: center;
+  
+    font-size: 2.5rem;
+   
+    margin-top:-1%;
+}
+
+header {
+    grid-area: header;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+}
+#div ul {
+    display:flex;
+    flex-flow: column nowrap;
+    
+}
+#div>ul {
+    visibility: hidden;
+    position:absolute;
+    margin-left:-3.5%;
+    
+}
+#div:hover>ul{
+    visibility: visible;
+    
+    
+}
+
+
+#subdespre {
+    position:absolute;
+    display: flex;
+    flex-flow:column nowrap;
+    margin-left:-3.5%;
+}
+#about > #subdespre {
+    visibility: hidden;
+}
+#about:hover > #subdespre {
+    visibility: visible;
+}
+
+body{
+    display:grid;
+    grid-template-rows:5%, 5%,10%, repeat(1, 6fr);
+    grid-template-columns:repeat(4,1fr);
+    background-image:url("imagini/IMG_6573.jpeg");
+    grid-template-areas:
+    ". . . ."
+    ". header header ."
+    ". opening opening ."
+    ". fault fault ."
+    ". offside offside ."
+    ". penalty penalty ."
+    ". aruncare aruncare ."
+    ". pdf pdf ."
+    ". footer footer .";
+    font-family: Arial, Helvetica, sans-serif;
+}
+#pdf {
+    grid-area:pdf;
+    display: flex;
+    justify-content: center;
+    margin:auto;
+}
+#pdf a{
+    text-decoration: none;
+    color:white;
+    text-align: center;
+}
+#opening {
+    grid-area:opening;
+}
+header{
+    grid-area:header;
+}
+#fault{
+    grid-area:fault;
+}
+#offside{
+    grid-area:offside;
+}
+#aruncare{
+    grid-area:aruncare;
+}
+#penalty{
+    grid-area:penalty;
+}
+footer{
+    grid-area:footer;
+
+}
+.regula{
+    margin: 10px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    color:white;
+    border:solid 1px white;
+    border-radius:4px;
+}
+header {
+    color:white;
+    display:flex;
+    justify-content:center;
+    margin:auto;
+}
+#opening {
+    color:white;
+}
+footer {
+    color:white;
+    display:flex;
+    justify-content: center;
+    margin:auto;
+}
+.bar{
+    background-color: white;
+    width:100%;
+    height:1px;
+    margin-top:-2%;
+}
+h3:hover{
+    animation-name:center1;
+    animation-duration: 1s;
+    
+}
+@keyframes center1{
+    from{
+        transform: translateX(0%);
+        color:white;
+        
+    }
+    to{
+        transform:translateX(45%);
+        color:red;
+    }
+}
+iframe {
+    width:560px;
+    height:315px;
+}
+@media only screen and (max-width: 768px) {
+    iframe{
+        width:140px;
+        height:78px;
+    }
+    body{
+    display:grid;
+    grid-template-rows:5%, 5%,10%, repeat(1, 5fr);
+    grid-template-columns:repeat(3,1fr);
+    background-image:url("imagini/IMG_6573.jpeg");
+    grid-template-areas:
+    ". . . "
+    ". . . "
+    "header opening . "
+    "header fault . "
+    "header offside . "
+    "header penalty . "
+    "header aruncare . "
+    "header pdf . ";
+    
+    font-family: Arial, Helvetica, sans-serif;
+    }
+    #frf {
+        grid-area: frf;
+    }
+    header{
+        margin-top:0%;
+        padding: 0%;
+        margin-left:-8%;
+        height:100%;
+        width:60%;
+    }
+    #color {
+        display:none;
+    }
+    
+    
+    
+    nav{
+        
+        position:absolute;
+        top:0%;
+        left:2%;
+        z-index: 3;
+        width:80%;
+    }
+    nav ul {
+        display:flex;
+        flex-flow: column nowrap;
+    
+        align-items: left;
+        
+    }
+    nav ul li {
+        list-style-type:none;
+        z-index:4;
+    }
+    nav ul li a {
+        text-align:left;
+        text-decoration:none;
+        color:white;
+    }
+    nav ul li a:hover {
+        color:rgb(179, 255, 179);
+    }
+    
+    #frf{
+        position: absolute;
+        margin-top:2%;
+        margin-left:160%;
+        width: 120px;
+        height: 75px;
+    }
+    button{
+        display:block;
+        opacity:0%;
+        z-index:11;
+        position:fixed;
+        margin-top:10%;
+        margin-left:200%;
+        width: 30px;
+        height:60px;
+    
+    }
+    .meno {
+        position: absolute;
+        display:block;
+        width: 45px;
+        height:35px;
+        margin-top:10%;
+        z-index:10;
+        margin-left:200%;
+    }
+    @keyframes slide-in {
+        0% {
+            transform: translateX(0px);
+        }
+        50% {
+            transform:translateX(15px);
+        }
+        100% {
+            transform: translateX(0px);
+        }
+    }
+    footer {
+        
+        display:flex;
+        margin-top:100%;
+        margin-left:35%;
+        color:white;
+        
+    
+    }
+    footer::before{
+        content: "©"
+    }
+    footer::after{
+        content:"©"
+    }
+    .bar{
+        z-index:2;
+        position:absolute;
+        background-color: black;
+        width:12.2em;
+        height:100%;
+        margin-left:0%;
+        margin-top:-15%;
+        opacity: 0.6;
+    }
+    
+    @keyframes comedown {
+        from {
+            transform:translateX(-100%);
+    
+        }
+        to {
+            transform:translateX(0%);
+        }
+    }
+    
+   
+    
+    
+    #dropdown-bg{
+        visibility: hidden;
+        position:absolute;
+        margin-top:2.8%;
+        margin-left:53%;
+        width:180px;
+        height:40px;
+        background-color: black;
+        opacity:0.6;
+        z-index:1;
+    }
+    
+    #subdespre {
+        display: none;
+        
+    }
+    #about > #subdespre {
+        display:none;
+    }
+    
+    #dropdown-about{
+        
+       
+        display:none;
+    }
+    
+    #about:hover> #subdespre {
+       
+        display:block;
+        position:relative;
+        margin-left:-10%;
+
+    }
+    #divizionari>ul {
+        display:none;
+    
+    }
+    #divizionari>ul:hover{
+        display:flex;
+        
+        position:relative;
+    }
+    
+    
+    h1 {
+        font-size: 2rem;
+    }
+
+    article img {
+        max-width: 100%;
+    }
+
+    #info {
+        font-size: 1rem;
+    }
+    
+    #div>ul {
+        display:none; 
+    }
+    #dropdown-bg{
+        display:none;
+    }
+    #div:hover>ul{
+        display:flex;
+        position:relative;
+        flex-flow:column nowrap;
+    }
+    #color {
+        display:none;
+    }
+    .regula{
+        margin: 20px;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        
+        box-shadow: 0 4px 0px rgba(0, 0, 0, 0.5);
+        color:white;
+        border:solid 1px white;
+        border-radius:4px;
+    }
+    .bar {
+        display:none;
+    }
+  }
+  #div ul {
+    display:flex;
+    flex-flow: column nowrap;
+    
+}
+#div>ul {
+    visibility: hidden;
+    position:absolute;
+    margin-left:-3.5%;
+    
+}
+#div:hover>ul{
+    visibility: visible;
+    
+    
+}
+
+
+#subdespre {
+    position:absolute;
+    display: flex;
+    flex-flow:column nowrap;
+    margin-left:-3.5%;
+}
+#about > #subdespre {
+    visibility: hidden;
+}
+#about:hover > #subdespre {
+    visibility: visible;
+}
+  

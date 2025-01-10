@@ -1,0 +1,438 @@
+/* General Styles */
+body {
+    background-image: url("https://fastly.picsum.photos/id/679/1920/1080.jpg?hmac=Vnnq6yAT9l2vN7Van4qwEtEr3Ly8EEORBE1J_zQl_Mw");
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows:  10% 5% 10% 1fr 1fr;
+    grid-template-areas:
+        "header header header header header"
+        ". title title title ."
+        ". info info info ."
+        ". serea martis martis ."
+        ". voicu balaj balaj .";
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.meno {
+    display:none;
+}
+button {
+    display:none;
+}
+#frf{
+    z-index: 6;
+    position: absolute;
+    margin-top:-0.8%;
+    margin-left:-15%;
+    width: 120px;
+    height: 75px;
+}
+#dropdown-bg{
+    visibility: hidden;
+    position:absolute;
+    margin-top:2.8%;
+    margin-left:53%;
+    width:180px;
+    height:40px;
+    background-color: black;
+    opacity:0;
+    z-index:1;
+}
+#dropdown-about{
+    visibility: hidden;
+   
+    position:absolute;
+    margin-top:2.9%;
+    margin-left:-10%;
+    width:180px;
+    height:20px;
+    background-color: black;
+    opacity:0;
+    z-index:1;
+}
+#about:hover + #dropdown-about {
+    visibility: visible;
+}
+nav>ul #div:hover + #dropdown-bg{
+    visibility: visible;
+}
+header {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:10;
+    
+    
+}
+header #color {
+    background-color: black;
+    opacity: 1;
+    position:relative;
+    height:50px;
+    width:100%;
+    opacity: 0;
+   
+}
+nav{
+    
+    position:absolute;
+    top:30%;
+    left:10%;
+    z-index: 5;
+    width:80%;
+}
+nav ul {
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: left;
+    
+}
+nav ul li {
+    list-style-type:    none;
+    z-index:4;
+}
+nav ul li a {
+    text-decoration: none;
+    color:white;
+}
+nav ul li a:hover {
+    color:rgb(179, 255, 179);
+}
+
+h1 {
+    text-align: center;
+  
+    font-size: 2.5rem;
+   
+    margin-top:-1%;
+}
+
+header {
+    grid-area: header;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#info {
+    grid-area: info;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 1.1rem;
+}
+#info p {
+    margin-top:-1%;
+}
+
+article {
+    margin: 10px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+article figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+}
+
+article img:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+article p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Hover effects */
+figcaption {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left:4%;
+    color: aqua;
+}
+
+#serea, #martis, #voicu, #balaj {
+    text-align: center;
+}
+
+#balaj img {
+    max-width: 350px;
+}
+
+@media (max-width: 768px) {
+    #frf {
+        grid-area: frf;
+    }
+    body {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows:7fr;
+        grid-template-areas:
+            " frf . ."
+            "  header title ."
+            " header info . "
+            " header serea ."
+            " header martis ."
+            " header voicu ."
+            " header balaj .";
+    }
+    header{
+        margin-top:0%;
+        padding: 0%;
+        margin-left:-8%;
+        height:100%;
+        width:60%;
+    }
+    #color {
+        display:none;
+    }
+    
+    
+    
+    nav{
+        
+        position:absolute;
+        top:0%;
+        left:5.5%;
+        z-index: 3;
+        width:80%;
+    }
+    nav ul {
+        display:flex;
+        flex-flow: column nowrap;
+    
+        align-items: left;
+        
+    }
+    nav ul li {
+        list-style-type:none;
+        z-index:4;
+    }
+    nav ul li a {
+        text-align:left;
+        text-decoration:none;
+        color:white;
+    }
+    nav ul li a:hover {
+        color:rgb(179, 255, 179);
+    }
+    
+    #frf{
+        position: absolute;
+        margin-top:2%;
+        margin-left:160%;
+        width: 120px;
+        height: 75px;
+    }
+    button{
+        display:block;
+        opacity:0%;
+        z-index:11;
+        position:absolute;
+        margin-top:2%;
+        margin-left:160%;
+        width: 30px;
+        height:60px;
+    
+    }
+    .meno {
+        position: absolute;
+        display:block;
+        width: 45px;
+        height:35px;
+        margin-top:8%;
+        z-index:10;
+        margin-left:162%;
+    }
+    @keyframes slide-in {
+        0% {
+            transform: translateX(0px);
+        }
+        50% {
+            transform:translateX(15px);
+        }
+        100% {
+            transform: translateX(0px);
+        }
+    }
+    footer {
+        position:absolute;
+        display:flex;
+        margin-top:100%;
+        margin-left:35%;
+        color:white;
+        
+    
+    }
+    footer::before{
+        content: "©"
+    }
+    footer::after{
+        content:"©"
+    }
+    .bar{
+        z-index:2;
+        position:absolute;
+        background-color: black;
+        width:12.2em;
+        height:100%;
+        margin-left:0%;
+        margin-top:-15%;
+        opacity: 0.6;
+    }
+    
+    @keyframes comedown {
+        from {
+            transform:translateX(-100%);
+    
+        }
+        to {
+            transform:translateX(0%);
+        }
+    }
+    
+   
+    
+    
+    #dropdown-bg{
+        visibility: hidden;
+        position:absolute;
+        margin-top:2.8%;
+        margin-left:53%;
+        width:180px;
+        height:40px;
+        background-color: black;
+        opacity:0.6;
+        z-index:1;
+    }
+    
+    #subdespre {
+        display: none;
+        
+    }
+    #about > #subdespre {
+        display:none;
+    }
+    
+    #dropdown-about{
+        
+       
+        display:none;
+    }
+    
+    #about:hover> #subdespre {
+       
+        display:block;
+        position:relative;
+        margin-left:-10%;
+
+    }
+    #divizionari>ul {
+        display:none;
+    
+    }
+    #divizionari>ul:hover{
+        display:flex;
+        
+        position:relative;
+    }
+    
+    
+    h1 {
+        font-size: 2rem;
+    }
+
+    article img {
+        max-width: 100%;
+    }
+
+    #info {
+        font-size: 1rem;
+    }
+    
+    #div>ul {
+        display:none; 
+    }
+    #dropdown-bg{
+        display:none;
+    }
+    #div:hover>ul{
+        display:flex;
+        position:relative;
+        flex-flow:column nowrap;
+        
+    }
+    
+}
+#balaj {
+    grid-area:balaj;
+
+}
+#martis {
+    grid-area: martis;
+}
+#serea {
+    grid-area: serea
+}
+#voicu {
+    grid-area:voicu
+}
+
+
+#div ul {
+    display:flex;
+    flex-flow: column nowrap;
+    
+}
+#div>ul {
+    visibility: hidden;
+    position:absolute;
+    margin-left:-3.5%;
+    
+}
+#div:hover>ul{
+    visibility: visible;
+    
+    
+}
+
+
+#subdespre {
+    position:absolute;
+    display: flex;
+    flex-flow:column nowrap;
+    margin-left:-3.5%;
+}
+#about > #subdespre {
+    visibility: hidden;
+}
+#about:hover > #subdespre {
+    visibility: visible;
+}
+
+
+#title {
+    grid-area:title;
+}

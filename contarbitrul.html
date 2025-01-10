@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <title>Logheaza-te aici</title>
+    <link rel="icon" href="imagini\ajfvrancea.png" type="images/png">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="contarbitrul.css" type="text/css" media="(min-width:600px)">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="contarbitrul.js"></script>
+</head>
+<body>
+    <header>
+        <img src="imagini\images.png" alt="LOGO FRF" id="frf">
+        <div id="color"></div>
+        
+            <nav id="nv">
+                
+                <ul>
+                <li><a href="index.html">ACASA</a></li>
+                <li><a href="vreausafiuarbitru.html">VREAU SA FIU ARBITRU</a></li>
+                <li id="about"><a href="#despre">DESPRE NOI</a><ul id="subdespre"><li><a>OBIECTIVE</a></li><li><a>AJUTOR</a></li></ul></li>
+                <div id="dropdown-about"></div>
+                <li><a href="reguli.html">REGULAMENT</a></li>
+               
+                <li id="div"><a href="#divizionari">ARBITRI DIVIZONARI</a><ul><li><a>PREZENT</a></li><li><a href="arbitrivranceni.html">TRECUT</a></li><li><a>VIITOR</a></li></ul></li>
+                <div id="dropdown-bg"></div> 
+                <li><a href="contarbitrul.html">MECIURILE MELE</a></li>
+
+                </ul>
+            </nav>
+       <img class="meno" src="imagini/meniu.png" alt="buton de meniu" id="hide">
+        <button id="bt"></button>
+             
+    </header>
+    <div class="loginform-bg">
+        <h3 id="games">Intra in contul tau de arbitru:</h3> 
+        <form id="logare">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="fmail" required><br>
+            <label for="password">Parola:</label><br>
+            <input type="password" id="password" name="fpassword" required><br>
+            <button id="submit"><h4>Login</h4></button>
+            
+        </form>
+        <form id="meci">
+            <label for="numemeci">Echipele intre care s-a disputat meciul:</label><br>
+            <input type="text" id="numemeci" name="fnumemeci" required><br>
+            <label for="data">Data disputarii meciului:</label>
+            <input type="date" id="data" name="fdatameci" required><br>
+            <label for="km">Kilometri alergati:</label>
+            <input type="text" id="km" name="fkm" required><br>
+            <button id="submit">Adauga meci</button>
+            
+            
+        </form>
+        <button id="logout">Logout</button>
+    </div>
+    <div id="listameciuri">
+        
+        
+    </div>
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

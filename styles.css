@@ -1,0 +1,500 @@
+
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+.meno {
+    display:none;
+}
+button {
+    display:none;
+}
+
+#dropdown-bg{
+    visibility: hidden;
+    position:absolute;
+    margin-top:3.5%;
+    margin-left:50%;
+    width:180px;
+    height:40px;
+    background-color: black;
+    
+    z-index:1;
+}
+#dropdown-about{
+    visibility: hidden;
+   
+    position:absolute;
+    margin-top:2.9%;
+    margin-left:-15%;
+    width:180px;
+    height:20px;
+    background-color: black;
+    
+    z-index:1;
+}
+#about:hover + #dropdown-about {
+    visibility: visible;
+}
+nav>ul #div:hover + #dropdown-bg{
+    visibility: visible;
+}
+header {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:10;
+    
+    
+}
+header #color {
+    background-color: black;
+    opacity: 1;
+    position:relative;
+    height:50px;
+    width:100%;
+    opacity: 0.6;
+   
+}
+nav{
+    
+    position:absolute;
+    top:30%;
+    left:10%;
+    z-index: 5;
+    width:80%;
+}
+nav ul {
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: left;
+    
+}
+nav ul li {
+    list-style-type:    none;
+    z-index:4;
+}
+nav ul li a {
+    text-decoration: none;
+    color:white;
+}
+nav ul li a:hover {
+    color:rgb(179, 255, 179);
+}
+
+h1 {
+    text-align: center;
+  
+    font-size: 2.5rem;
+   
+    margin-top:-1%;
+}
+
+header {
+    grid-area: header;
+    padding: 20px;
+    background: black;
+}
+#div ul {
+    display:flex;
+    flex-flow: column nowrap;
+    
+}
+#div>ul {
+    visibility: hidden;
+    position:absolute;
+    margin-left:0%;
+    
+}
+#div:hover>ul{
+    visibility: visible;
+    
+    
+}
+
+
+#subdespre {
+    position:absolute;
+    display: flex;
+    flex-flow:column nowrap;
+    margin-left:0%;
+}
+#about > #subdespre {
+    visibility: hidden;
+}
+#about:hover > #subdespre {
+    visibility: visible;
+}
+#titlu{
+    grid-area:titlu;
+}
+#francois{
+    grid-area:francois;
+}
+#why {
+    grid-area:why;
+}
+
+
+#titlu {
+    display:flex;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+}
+#titlu h1 {
+    color:aqua;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#talktous {
+    grid-area:talktous;
+}
+#francois {
+    width:50%;
+    display:flex;
+    justify-content: center;
+    margin:auto;
+    border: 3px solid black;
+    border-radius: 10px;
+    grid-area:francois;
+}
+#why {
+    width:50%;
+    margin-left:25%;
+
+}
+#why h2{
+    color:aqua;
+}
+#info {
+    grid-area:info;
+}
+#frf{
+    z-index: 12;
+    position: absolute;
+    margin-top:-1.5%;
+    width: 120px;
+    height: 75px;
+}
+body {
+    background-image:url("imagini/uefa-champions-league-football-club-trophy-1w0nb9jvfxvqe3js.jpg");
+
+    background-position-x:right;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    background-size:cover;
+    display:grid;
+   grid-template-rows: 10% 5%  15% repeat(1,3fr);
+   grid-template-columns:repeat(1,4fr);
+   grid-template-areas:
+   "header header header header"
+   " . titlu titlu . "
+   " . info info ."
+   ". francois francois ."
+   ". why why ."
+   ". talktous talktous .";
+
+   
+    font-family:"Poppins", sans-serif;
+}
+#info{
+    height:140px;
+}
+#talktous{
+    width:50%;
+    margin-left:25%;
+    height:100%;
+}
+#talktous > h4 {
+    color:aqua;
+}
+#talktous >h2 {
+    color:blue;
+}
+.blackbar {
+    position:absolute;
+    margin-top:-0.1%;
+    width:43%;
+    height:1px;
+    background-color: white;
+}
+.fluier {
+    position: absolute;
+    z-index:4;
+    margin-left:34%;
+    margin-top:48%;
+    width:90px;
+    height: 60px;
+    animation: balance 2s ease-in-out infinite;
+}
+section {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    padding: 20px;
+    color:white;
+    
+}
+@keyframes balance {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+}
+@media only screen and (max-width:768px) {
+ #titlu h1{
+
+    font-size:20px;
+    margin-left:20%;
+ }   
+ #talktous >h2 {
+    color:white;
+ }
+ .fluier {
+    display:none;
+    
+ }
+ body{
+    grid-template-columns:repeat(1,4fr);
+    grid-template-rows:repeat(1,7fr);
+    grid-template-areas:
+    "header . . . "
+    "header titlu . . "
+    "heaader info . ."
+    "header info . ."
+    "header francois . ."
+    "header why . ."
+    "header francois . .";
+    header{
+        margin-top:0%;
+        padding: 0%;
+        margin-left:-8%;
+        height:100%;
+        width:55%;
+        background-color:black;
+        opacity:0.8;
+    }
+    #color {
+        display:none;
+    }
+    
+    
+    
+    nav{
+        
+        position:absolute;
+        top:0%;
+        left:15%;
+        z-index: 3;
+        width:80%;
+    }
+    nav ul {
+        display:flex;
+        flex-flow: column nowrap;
+    
+        align-items: left;
+        
+    }
+    nav ul li {
+        list-style-type:none;
+        z-index:4;
+    }
+    nav ul li a {
+        text-align:left;
+        text-decoration:none;
+        color:white;
+    }
+    nav ul li a:hover {
+        color:rgb(179, 255, 179);
+    }
+    
+    #frf{
+        position: absolute;
+        margin-top:5%;
+        margin-left:160%;
+        width: 120px;
+        height: 75px;
+    }
+    button{
+        display:block;
+        opacity:0%;
+        z-index:11;
+        position:absolute;
+        margin-top:2%;
+        margin-left:160%;
+        width: 30px;
+        height:60px;
+    
+    }
+    .meno {
+        position: absolute;
+        display:block;
+        width: 45px;
+        height:35px;
+        margin-top:12%;
+        z-index:10;
+        margin-left:155%;
+    }
+    @keyframes slide-in {
+        0% {
+            transform: translateX(0px);
+        }
+        50% {
+            transform:translateX(15px);
+        }
+        100% {
+            transform: translateX(0px);
+        }
+    }
+    footer {
+        position:absolute;
+        display:flex;
+        margin-top:100%;
+        margin-left:35%;
+        color:white;
+        
+    
+    }
+    footer::before{
+        content: "©"
+    }
+    footer::after{
+        content:"©"
+    }
+    .bar{
+        z-index:2;
+        position:absolute;
+        background-color: black;
+        width:11em;
+        height:100%;
+        margin-left:0%;
+        margin-top:-15%;
+        opacity: 0.6;
+    }
+    
+    @keyframes comedown {
+        from {
+            transform:translateX(-100%);
+    
+        }
+        to {
+            transform:translateX(0%);
+        }
+    }
+    
+   
+    
+    
+    #dropdown-bg{
+        visibility: hidden;
+        position:absolute;
+        margin-top:2.8%;
+        margin-left:53%;
+        width:180px;
+        height:40px;
+        background-color: black;
+        opacity:1;
+        z-index:1;
+    }
+    
+    #subdespre {
+        display: none;
+        
+    }
+    #about > #subdespre {
+        display:none;
+    }
+    
+    #dropdown-about{
+        
+       
+        display:none;
+    }
+    
+    #about:hover> #subdespre {
+       
+        display:block;
+        position:relative;
+        margin-left:0%;
+
+    }
+    #divizionari>ul {
+        display:none;
+    
+    }
+    #divizionari>ul:hover{
+        display:flex;
+        margin-left:-10%;
+        
+    }
+    
+    
+    h1 {
+        font-size: 2rem;
+    }
+
+    article img {
+        max-width: 100%;
+    }
+
+    #info {
+        font-size: 1rem;
+    }
+    
+    #div>ul {
+        display:none; 
+    }
+    #dropdown-bg{
+        display:none;
+    }
+    #div:hover>ul{
+        display:flex;
+        position:relative;
+        margin-left:0%;
+        flex-flow:column nowrap;
+        
+    }
+    
+ }
+
+#div>ul {
+    visibility: hidden;
+    position:absolute;
+    margin-left:20%;
+    
+}
+#div:hover>ul{
+    visibility: visible;
+    
+    
+}
+
+
+#subdespre {
+    position:absolute;
+    display: flex;
+    flex-flow:column nowrap;
+    margin-left:0%;
+}
+#about > #subdespre {
+    visibility: hidden;
+}
+#about:hover > #subdespre {
+    visibility: visible;
+}
+}
