@@ -19,4 +19,25 @@ window.onload = function(){
             divcl.style.display = 'block';
         }
     }
+    const svgContainer = document.getElementById('svgContainer');
+
+
+let svgNS = "http://www.w3.org/2000/svg";
+let svg = document.createElementNS(svgNS, "svg");
+svg.setAttribute("width", "200");
+svg.setAttribute("height", "200");
+svg.setAttribute("viewBox", "0 0 200 200");
+
+
+let circle = document.createElementNS(svgNS, "circle");
+circle.setAttribute("cx", "100");
+circle.setAttribute("cy", "100");
+circle.setAttribute("r", "50");
+circle.setAttribute("fill", "blue");
+
+
+svg.appendChild(circle);
+
+
+svgContainer.appendChild(svg);
 }

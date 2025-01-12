@@ -71,7 +71,7 @@ window.onload = function(){
                             logout.style.display = "block"; 
                             
                             var request = fetch("http://localhost:8000/contmeci.json");
-
+                            request.mode = "no-cors";
                                 request.then(function(response){
                                     if(response.status=='200')
                                         return response.text();
